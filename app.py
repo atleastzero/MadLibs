@@ -50,8 +50,11 @@ def story1():
 
 @app.route("/story1output")
 def story1output():
-    verb = inputs[0].get('verb0')
-    nouns = list(inputs[0].get('noun0'))
+    past_verbs = list()
+    past_verbs.append(inputs[0].get('past_verb0'))
+    past_verbs.append(inputs[0].get('past_verb1'))
+    nouns = list()
+    nouns.append(inputs[0].get('noun0'))
     nouns.append(inputs[0].get('noun1'))
     nouns.append(inputs[0].get('noun2'))
     nouns.append(inputs[0].get('noun3'))
@@ -59,13 +62,14 @@ def story1output():
     nouns.append(inputs[0].get('noun5'))
     plural_noun = inputs[0].get('plural_noun0')
     formofgovernment = inputs[0].get('formofgovernment0')
-    adjectives = list(inputs[0].get('adjective0'))
+    adjectives = list()
+    adjectives.append(inputs[0].get('adjective0'))
     adjectives.append(inputs[0].get('adjective1'))
     adjectives.append(inputs[0].get('adjective2'))
     adjectives.append(inputs[0].get('adjective3'))
-    past_verb = inputs[0].get('past_verb0')
     verbing = inputs[0].get('verbing0')
-    adverbs = list(inputs[0].get('adverb0'))
+    adverbs = list()
+    adverbs.append(inputs[0].get('adverb0'))
     adverbs.append(inputs[0].get('adverb1'))
     superlative = inputs[0].get('superlative0')
     authority_figure = inputs[0].get('authority_figure0')
@@ -73,12 +77,12 @@ def story1output():
     random.shuffle(nouns)
     random.shuffle(adjectives)
     random.shuffle(adverbs)
-    words = {'verb': verb, 'nouns': nouns, 'plural_noun': plural_noun,
+    print(past_verbs)
+    words = {'nouns': nouns, 'plural_noun': plural_noun,
              'formofgovernment': formofgovernment, 'adjectives': adjectives,
-             'past_verb': past_verb, 'verbing': verbing, 'adverbs': adverbs,
+             'past_verbs': past_verbs, 'verbing': verbing, 'adverbs': adverbs,
              'superlative': superlative, 'authority_figure': authority_figure,
              'proper_name': proper_name}
-    print(words)
     return render_template("story1output.html", words=words)
 
 
