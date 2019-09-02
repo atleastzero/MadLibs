@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WELCOME</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/logo.css') }}">
+    <link rel="stylesheet" href="/static/css/prelude.css">
+</head>
+
+<body>
+    <div id="logo" class="noselect">
+        <img id="logoDefault" class="logoSub" src="../static/logo.svg" alt="Star Wars Logo" style="display: block;">
+        <div class="logoSub logoText" style="display: none;">
+            <div>STaR</div>
+            <div>waRS</div>
+        </div>
+    </div>
+    <section class="star-wars">
+
+        <script>
+            var timer = setTimeout(function() {
+                window.location = '/tooutput'
+            }, 5000);
+        </script>
+
+</body>
+
+</html>

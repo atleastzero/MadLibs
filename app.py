@@ -18,7 +18,6 @@ def home():
 @app.route("/nav", methods=["POST"])
 def nav():
     story = request.form["story"]
-    print("The story is '" + story + "'")
     return redirect("/story" + story)
 
 
@@ -31,6 +30,11 @@ def complete():
 @app.route("/prelude")
 def prelude():
     return render_template("prelude.html")
+
+
+@app.route("/logo")
+def logo():
+    return render_template("logo.html")
 
 
 @app.route("/tooutput")
@@ -46,7 +50,6 @@ def story1():
 
 @app.route("/story1output")
 def story1output():
-    print(inputs)
     verb = inputs[0].get('verb0')
     nouns = list(inputs[0].get('noun0'))
     nouns.append(inputs[0].get('noun1'))
