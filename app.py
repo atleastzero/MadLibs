@@ -1,4 +1,5 @@
 import random
+import time
 from flask import Flask, render_template, request, redirect
 # Thanks to noelledaley on github and opentechschool
 # for showing me how to use Flask
@@ -24,6 +25,16 @@ def nav():
 @app.route("/complete", methods=["POST"])
 def complete():
     inputs.append(request.form)
+    return redirect("/prelude")
+
+
+@app.route("/prelude")
+def prelude():
+    return render_template("prelude.html")
+
+
+@app.route("/tooutput")
+def tooutput():
     return redirect("/story" + str(story_num[(len(story_num) - 1)]) + "output")
 
 
@@ -60,35 +71,35 @@ def story1output():
     random.shuffle(adjectives)
     random.shuffle(adverbs)
     words = {'verb': verb, 'nouns': nouns, 'plural_noun': plural_noun,
-              'formofgovernment': formofgovernment, 'adjectives': adjectives,
-              'past_verb': past_verb, 'verbing': verbing, 'adverbs': adverbs,
-              'superlative': superlative, 'authority_figure': authority_figure,
-              'proper_name' : proper_name}
+             'formofgovernment': formofgovernment, 'adjectives': adjectives,
+             'past_verb': past_verb, 'verbing': verbing, 'adverbs': adverbs,
+             'superlative': superlative, 'authority_figure': authority_figure,
+             'proper_name': proper_name}
     print(words)
-    return render_template("story1output.html", words = words)
+    return render_template("story1output.html", words=words)
 
 
 @app.route("/story2")
 def story2():
-    story_num = 2
+    story_num.append(2)
     return render_template("story2inputs.html")
 
 
 @app.route("/story3")
 def story3():
-    story_num = 3
+    story_num.append(3)
     return render_template("story3inputs.html")
 
 
 @app.route("/story4")
 def story4():
-    story_num = 4
+    story_num.append(4)
     return render_template("story4inputs.html")
 
 
 @app.route("/story5")
 def story5():
-    story_num = 5
+    story_num.append()
     return render_template("story5inputs.html")
 
 
