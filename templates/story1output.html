@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WELCOME</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/story.css') }}">
+</head>
+
+<body>
+    <div class="fade"></div>
+
+    <section class="star-wars">
+
+        <audio src="../static/theme.mp3" autoplay></audio>
+        <div class="crawl">
+
+            <div class="title">
+                <p>Episode I</p>
+                <h1>The Phantom Menace</h1>
+            </div>
+            <p>
+                Turmoil has {{words.get['noun']}} the GALACTIC {{words.get('formofgovernment').upper()}}. The
+                {{words.get('nouns')[0]}}
+                of trade routes to {{words.get('place')}} is in dispute. Hoping to
+                resolve the matter with a {{words.get('nouns')[1]}} of deadly {{words.get('plural_noun')}}, the
+                {{words.get('adjectives')[0].capitalize()}} Trade Federation has {{words.get('past_verb')}} all {{words.get('verbing')}}
+                to the {{words.get('adjectives')[1]}} {{words.get('nouns')[2]}} of {{words.get('proper_name').capitalize()}}. While the
+                congress of the {{words.get('formofgovernment').capitalize()}} {{words.get('adverbs')[0]}} debates this
+                {{words.get('adjectives')[2]}} chain of events, the {{words.get('superlative').capitalize()}}
+                {{words.get('authority_figure').capitalize()}} has {{words.get('adverbs')[1]}} dispatched {{words.get('adjectives')[3]}}
+                Jedi
+                Knights, the guardians
+                of {{words.get('nouns')[3]}} and {{words.get('nouns')[4]}} in the galaxy, to settle the {{words.get('nouns')[5]}}...
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
