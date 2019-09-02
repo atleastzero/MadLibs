@@ -4,19 +4,22 @@
 <head>
     <title>WELCOME</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/prelude.css') }}">
+    <link rel="stylesheet" href="/static/css/prelude.css">
 </head>
 
 <body>
-        <div id="prelude">A long time ago in a galaxy far, far away ....</div>
-        <script>
-            window.setTimeout(function () {
+    <div id="prelude">
+        <p>A long time ago in a </p>
+        <p>galaxy far,</p>
+        <p>far away ....</p>
+    </div>
 
-                // Move to a new location or you can do something else
-                window.location.href = "/tooutput";
+    <script>
+        var timer = setTimeout(function() {
+            window.location = '/tooutput'
+        }, 5000);
+    </script>
 
-            }, 3000);
-
-        </script>
 </body>
 
 </html>
