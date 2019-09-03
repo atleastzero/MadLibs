@@ -93,7 +93,21 @@ def story2():
 
 @app.route("/story2output")
 def story2output():
-    return render_template("story2output.html")
+    nouns = list()
+    adjectives = list()
+    nouns.append(inputs[0].get('noun0'))
+    nouns.append(inputs[0].get('noun1'))
+    nouns.append(inputs[0].get('noun2'))
+    nouns.append(inputs[0].get('noun3'))
+    past_verb = inputs[0].get('past_verb')
+    plural_noun = inputs[0].get('plural_noun')
+    title = inputs[0].get('title')
+    proper_name = inputs[0].get('proper_name')
+    adjectives.append(inputs[0].get('adjective0'))
+    adjectives.append(inputs[0].get('adjective1'))
+    words = {'nouns' : nouns, 'adjectives' : adjectives, 'past_verb' : past_verb,
+             'plural_noun' : plural_noun, 'title' : title, 'proper_name' : proper_name}
+    return render_template("story2output.html", words = words)
 
 @app.route("/story3")
 def story3():
