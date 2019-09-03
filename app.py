@@ -91,6 +91,9 @@ def story2():
     story_num.append(2)
     return render_template("story2inputs.html")
 
+@app.route("/story2output")
+def story2output():
+    return render_template("story2output.html")
 
 @app.route("/story3")
 def story3():
@@ -98,36 +101,59 @@ def story3():
     return render_template("story3inputs.html")
 
 
+@app.route("/story3output")
+def story3output():
+    return render_template("story3output.html")
+
 @app.route("/story4")
 def story4():
     story_num.append(4)
     return render_template("story4inputs.html")
 
 
+@app.route("/story4output")
+def story4output():
+    return render_template("story4output.html")
+
 @app.route("/story5")
 def story5():
-    story_num.append()
+    story_num.append(5)
     return render_template("story5inputs.html")
 
 
+@app.route("/story5output")
+def story5output():
+    return render_template("story5output.html")
+
 @app.route("/story6")
 def story6():
-    story_num = 6
+    story_num.append(6)
     return render_template("story6inputs.html")
 
 
+@app.route("/story6output")
+def story6output():
+    return render_template("story6output.html")
+
 @app.route("/story7")
 def story7():
-    story_num = 7
+    story_num.append(7)
     return render_template("story7inputs.html")
 
 
+@app.route("/story7output")
+def story7output():
+    return render_template("story7output.html")
+
 @app.route("/story8")
 def story8():
-    story_num = 8
+    story_num.append(8)
     return render_template("story8inputs.html")
 
 
+@app.route("/story8output")
+def story8output():
+    return render_template("story8output.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
-

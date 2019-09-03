@@ -3,12 +3,13 @@
 
 <head>
     <title>WELCOME</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
 </head>
 
 <body>
+    <!-- Welcome -->
     <h1>Welcome to Story 8, and be prepared for an epic journey.</h1>
+    <!-- Selects story -->
     <form action="/nav" method="POST">
         <select name="story">
             <option value="1">Mystery Story One</option>
@@ -18,11 +19,14 @@
             <option value="5">Mystery Story Five</option>
             <option value="6">Mystery Story Six</option>
             <option value="7">Mystery Story Seven</option>
-            <option value="8">Mystery Story Eight</option>
+            <option value="8" selected>Mystery Story Eight</option>
         </select>
         <input type="submit" value="select" />
+    </form>
 
-
+    <!-- User inputs; reroutes to /complete which generates a url based on story number and saves inputs for story -->
+    <form action="/complete" method="POST" name="story1">
+        <input type="submit" value="ENTER" />
     </form>
 </body>
 
