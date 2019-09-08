@@ -49,7 +49,7 @@ def logo():
 
 @app.route("/tooutput")
 def tooutput():
-    return redirect("/story" + str(story_num[len(story_num)]) + "output")
+    return redirect("/story" + str(story_num[len(story_num) - 1]) + "output")
 
 
 @app.route("/story1")
