@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 # story_num tracks which story is currently active
 story_num = list()
+story_num.append(1)
 
 # inputs stores list of values from the submitted
 # form (the one with the words, not story number)
