@@ -1,26 +1,35 @@
-import random
-import time
-from flask import Flask, render_template, request, redirect
 # Thanks to noelledaley on github and opentechschool
 # for showing me how to use Flask
+
+# import to use random
+import random
+
+# import to use flask and specific functions
+from flask import Flask, render_template, request, redirect
+
+# initialize flask
 app = Flask(__name__)
 
+# story_num tracks which story is currently active
 story_num = list()
+
+# inputs stores list of values from the submitted
+# form (the one with the words, not story number)
 inputs = list()
-story_num.append(1)
 
-
+# landing page
 @app.route("/")
 def home():
     return render_template("index.html")
 
-
+# navigates to story page based on 
 @app.route("/nav", methods=["POST"])
 def nav():
     story = request.form["story"]
+    print(story)
     return redirect("/story" + story)
 
-
+# navigates to final results / animation
 @app.route("/complete", methods=["POST"])
 def complete():
     inputs.append(request.form)
@@ -39,7 +48,7 @@ def logo():
 
 @app.route("/tooutput")
 def tooutput():
-    return redirect("/story" + str(story_num[(len(story_num) - 1)]) + "output")
+    return redirect("/story" + str(story_num[len(story_num)]) + "output")
 
 
 @app.route("/story1")

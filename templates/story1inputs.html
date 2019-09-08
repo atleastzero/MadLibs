@@ -11,7 +11,7 @@
     <h1>Welcome to Story 1, and be prepared for an epic journey.</h1>
     <!-- Selects story -->
     <form action="/nav" method="POST">
-        <select name="story">
+        <select name="story" onchange="onChange(this.form.story)">
             <option value="1">Mystery Story One</option>
             <option value="2">Mystery Story Two</option>
             <option value="3">Mystery Story Three</option>
@@ -20,7 +20,12 @@
             <option value="6">Mystery Story Six</option>
             <option value="7">Mystery Story Seven</option>
             <option value="8">Mystery Story Eight</option>
+            <!-- Thank you to Dani and 
+                https://www.codeproject.com/Articles/656/Using-JavaScript-to-handle-drop-down-list-selectio 
+                for the JS help-->
+
         </select>
+
         <input type="submit" value="select" />
     </form>
 
