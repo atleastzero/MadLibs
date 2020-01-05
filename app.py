@@ -174,10 +174,27 @@ def story8():
     story_num.append(8)
     return render_template("story8inputs.html")
 
-
 @app.route("/story8output")
 def story8output():
     return render_template("story8output.html")
+
+@app.route("/storyluke")
+def storyluke():
+    story_num.append(9)
+    return render_template("storylukeinput.html")
+
+@app.route("/story9output")
+def storylukeoutput():
+    return render_template("storylukeoutput.html")
+
+@app.route("/storylogan")
+def storylogan():
+    story_num.append(10)
+    return render_template("storyloganinput.html")
+
+@app.route("/story10output")
+def storyloganoutput():
+    return render_template("storyloganoutput.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
