@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    height: 800px;
+    height: 900px;
     color: #feda4a;
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 500%;
@@ -35,7 +35,7 @@ body {
     position: relative;
     top: 9999px;
     transform-origin: 50% 100%;
-    animation: crawl 60s linear;
+    animation: crawl 6s linear;
 }
 
 .crawl>.title {
@@ -54,7 +54,7 @@ body {
         transform: rotateX(20deg) translateZ(0);
     }
     100% {
-        top: -6000px;
-        transform: rotateX(25deg) translateZ(-2500px);
+        top: -13000px;
+        transform: rotateX(25deg) translateZ(-5000px);
     }
 }
